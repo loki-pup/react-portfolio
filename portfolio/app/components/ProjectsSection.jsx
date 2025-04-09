@@ -8,6 +8,8 @@ const projectData = [
     description: "Loki's first time shower",
     image: "/images/projects/1.jpg",
     tag: ["All", "Lulu","Loki"],
+    gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
+    previewUrl:"https://loki-pup.github.io/",
 },
 {
     id: 2,
@@ -15,6 +17,8 @@ const projectData = [
     description: "Happy the golden retriever",
     image: "/images/projects/2.jpg",
     tag: ["All", "Happy", "Golden Retriever"],
+    gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
+    previewUrl:"https://loki-pup.github.io/",
 },
 {
     id: 3,
@@ -22,6 +26,8 @@ const projectData = [
     description: "Young Loki",
     image: "/images/projects/3.jpg",
     tag: ["All", "Lulu", "Loki"],
+    gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
+    previewUrl:"https://loki-pup.github.io/",
 },
 {
     
@@ -30,6 +36,8 @@ const projectData = [
         description: "Bozyu and the bone",
         image: "/images/projects/4.jpg",
         tag: ["All", "Lulu", "Bozyu", "Border Collie"],
+        gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
+    previewUrl:"https://loki-pup.github.io/",
 },
 {
     
@@ -38,6 +46,8 @@ const projectData = [
     description: "Fifi is smelly",
     image: "/images/projects/5.jpg",
     tag: ["All", "Fifi"],
+    gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
+    previewUrl:"https://loki-pup.github.io/",
 },{
     
     id: 6,
@@ -45,6 +55,8 @@ const projectData = [
     description: "Bozyu and the ice cream",
     image: "/images/projects/6.jpg",
     tag: ["All", "Lulu", "Bozyu", "Border Collie"],
+    gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
+    previewUrl:"https://loki-pup.github.io/",
 },{
     
     id: 7,
@@ -52,6 +64,8 @@ const projectData = [
     description: "Bozyu and the frisbee",
     image: "/images/projects/7.jpg",
     tag: ["All", "Lulu", "Bozyu", "Border Collie"],
+    gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
+    previewUrl:"https://loki-pup.github.io/",
 },{
     
     id: 8,
@@ -59,6 +73,8 @@ const projectData = [
     description: "Bozyu thinks you're idiot",
     image: "/images/projects/8.jpg",
     tag: ["All", "Lulu", "Bozyu", "Border Collie"],
+    gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
+    previewUrl:"https://loki-pup.github.io/",
 }, {
     
     id: 9,
@@ -66,13 +82,26 @@ const projectData = [
     description: "Cute Luna",
     image: "/images/projects/9.HEIC",
     tag: ["All", "Lulu", "Luna", "Border Collie"],
+    gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
+    previewUrl:"https://loki-pup.github.io/",
 },
 ]
 
 const ProjectsSection = () => {
     return(
-        <><h2>Projects</h2>
-        <div></div>
+        <>
+        <h2>Projects</h2>
+        <div>{projectData.map((project) =>  (
+        <ProjectCard 
+        key={project.id} 
+        title={project.title} 
+        description={project.description} 
+        imgUrl={project.image}
+        tags ={project.tag}
+        gitUrl={project.gitUrl}
+        previewUrl={project.previewUrl}
+        />
+    ))}</div>
         </>
     )
 };
