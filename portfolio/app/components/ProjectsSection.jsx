@@ -80,7 +80,7 @@ const projectData = [
     id: 9,
     title:"Luna",
     description: "Cute Luna",
-    image: "/images/projects/9.HEIC",
+    image: "/images/projects/9.jpg",
     tag: ["All", "Lulu", "Luna", "Border Collie"],
     gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
     previewUrl:"https://loki-pup.github.io/",
@@ -90,14 +90,20 @@ const projectData = [
 const ProjectsSection = () => {
     return(
         <>
-        <h2>Projects</h2>
-        <div>{projectData.map((project) =>  (
+        <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">Projects</h2>
+        <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+            <button>All</button>
+            <button>Bozyu</button>
+            <button>Loki</button>
+            <button>Luna</button>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12">{projectData.map((project) =>  (
         <ProjectCard 
         key={project.id} 
         title={project.title} 
         description={project.description} 
         imgUrl={project.image}
-        tags ={project.tag}
+        //tags ={project.tag}
         gitUrl={project.gitUrl}
         previewUrl={project.previewUrl}
         />
