@@ -14,10 +14,10 @@ const EmailSection = () =>{
             </p>
             <div className="socials flex flex-row gap-2">
                 <Link href="https://t.me/okkillbozyu">
-                    <Image src="/images/Telegram_logo.svg" alt="find me at telegram" width={40} height={40} className="mr-3"/>
+                    <Image src="./images/Telegram_logo.svg" alt="find me at telegram" width={40} height={40} className="mr-3"/>
                 </Link>
                 <Link href="https://www.instagram.com/gwfcloki/?igsh=Z2ljaXRiOGM0bjZx&utm_source=qr">
-                    <Image src="/images/Instagram_logo_2016.svg" alt="find me at instagram" width={40} height={40}/>
+                    <Image src="./images/Instagram_logo_2016.svg" alt="find me at instagram" width={40} height={40}/>
                 </Link>
             </div>
         </div>
