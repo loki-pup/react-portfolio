@@ -53,7 +53,7 @@ const AboutSection = () =>{
         <section className="text-[#8bdff7] pt-8" id="about">
             <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 ">
             <div className="mt-4 md:mt-0 text-center flex flex-col h-full">
-                <Image src="./images/aboutBozyu.jpg" alt="bozyu venom" width={500} height={500} />
+                <Image src="./images/projects/aboutBozyu.jpg" alt="bozyu venom" width={500} height={500} />
                 <p className="text-[#FBEBD9]">Bozyu looks like a Venom with her little tongue out</p>
                 </div>
                 <div className="mt-4 md:mt-0 text-left flex flex-col h-full ">
