@@ -15,6 +15,8 @@ runs:
       with:
         path: node_modules
         key: node-modules-${{ hashFiles('package-lock.json') }}
+        
+    - run: cat package-lock.json  
 
     - name: Install dependencies 🔧
       shell: bash
