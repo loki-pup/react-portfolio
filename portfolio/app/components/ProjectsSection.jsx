@@ -1,5 +1,7 @@
-import React from "react";
+"use client";
+import React , {useState} from "react";
 import ProjectCard from "./ProjectCard";
+import ProjectTag from "./ProjectTag";
 
 const projectData = [
     {
@@ -87,17 +89,42 @@ const projectData = [
 },
 ]
 
+const projectTagsData = [
+    {name:"All"},
+    {name:"Bozyu"},
+    {name:"Border Collie"},
+    {name:"Loki"},
+    {name:"Luna"},
+    {name:"Fifi"},
+    {name:"Happy"},
+    {name:"Golden Retriever"}
+]
+
 const ProjectsSection = () => {
+    const [tag, SetTag] = useState("All");
+
+    const handleTagChange = (newTag) =>{
+        SetTag(newTag);
+    };
+
+    const filteredProjects = projectData.filter((project) => 
+        project.tag.includes(tag)
+     );
+
     return(
-        <>
-        <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">Projects</h2>
-        <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
-            <button>All</button>
-            <button>Bozyu</button>
-            <button>Loki</button>
-            <button>Luna</button>
+        <section className="pt-16"  id="projects">
+        <h2 className="text-center text-4xl font-bold text-white pt-6 mb-8 md:mb-10">Doggies</h2>
+        <div className="text-white flex flex-wrap justify-center items-center gap-2 py-6">
+            {projectTagsData.map((tags) => (
+            <ProjectTag 
+            key={tags.name}
+            onClick={handleTagChange} 
+            name={tags.name} 
+            isSelected ={tag === tags.name} />
+            ))}
         </div>
-        <div className="grid md:grid-cols-3 gap-8 md:gap-12">{projectData.map((project) =>  (
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+            {filteredProjects.map((project) =>  (
         <ProjectCard 
         key={project.id} 
         title={project.title} 
@@ -108,7 +135,7 @@ const ProjectsSection = () => {
         previewUrl={project.previewUrl}
         />
     ))}</div>
-        </>
+        </section>
     )
 };
 

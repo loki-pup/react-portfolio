@@ -7,7 +7,8 @@ import ProjectsSection from "./components/ProjectsSection";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#121212]">
+    <main className="flex min-h-screen flex-col bg-contain " style={{ backgroundImage: "url('/images/background2.png')" }}>
+      
     <Navbar />
     <div class="container mt-24 mx-auto px-12 py-4">
       <HeroSection />

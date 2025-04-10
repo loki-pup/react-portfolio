@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes waveBG {
+  0%   { background-position: 0% 50%; }
+  20%  { background-position: 30% 60%; }
+  40%  { background-position: 70% 40%; }
+  60%  { background-position: 40% 70%; }
+  80%  { background-position: 60% 30%; }
+  100% { background-position: 0% 50%; }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -26,8 +35,11 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
