@@ -30,14 +30,17 @@ jobs:
         with:
           static_site_generator: next
 
-      - name: Build with Next.js 🏗️
+      - name: Build and export with Next.js 🏗️
         working-directory: portfolio
-        run: npx next build
+        run: |
+          npx next build
+          npx next export
+
 
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: portfolio/out
 
   deploy:
     environment:
