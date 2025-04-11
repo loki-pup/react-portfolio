@@ -87,6 +87,76 @@ const projectData = [
     gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
     previewUrl:"https://loki-pup.github.io/",
 },
+{
+    
+    id: 10,
+    title:"Hannibal Fifi",
+    description: "Fifi looks like Hannibal with the mask",
+    image: "./images/projects/10.jpg",
+    tag: ["All", "Fifi"],
+    gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
+    previewUrl:"https://loki-pup.github.io/",
+},
+{
+    
+    id: 11,
+    title:"Caterpillar Loki",
+    description: "Loki looks like golden caterpillar when hiding his paws",
+    image: "./images/projects/11.jpg",
+    tag: ["All", "Lulu","Loki"],
+    gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
+    previewUrl:"https://loki-pup.github.io/",
+},
+{
+    
+    id: 12,
+    title:"Luna Chair",
+    description: "Luna sitting on the chair",
+    image: "./images/projects/12.jpg",
+    tag: ["All", "Lulu", "Luna", "Border Collie"],
+    gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
+    previewUrl:"https://loki-pup.github.io/",
+},
+{
+    
+    id: 13,
+    title:"Bozyu and Luna",
+    description: "Bozyu first time meeting Luna",
+    image: "./images/projects/13.jpg",
+    tag: ["All", "Bozyu","Lulu", "Luna", "Border Collie"],
+    gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
+    previewUrl:"https://loki-pup.github.io/",
+},
+{
+    
+    id: 14,
+    title:"Pipi in Winter",
+    description: "Pipi with her pink sweater and blue neck warmer",
+    image: "./images/projects/14.jpg",
+    tag: ["All", "Pipi"],
+    gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
+    previewUrl:"https://loki-pup.github.io/",
+},
+{
+    
+    id: 15,
+    title:"Happy Happy",
+    description: "Happy looks happy",
+    image: "./images/projects/15.jpg",
+    tag: ["All", "Happy", "Golden Retriever"],
+    gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
+    previewUrl:"https://loki-pup.github.io/",
+},
+{
+    
+    id: 16,
+    title:"Bear Pipi",
+    description: "Pipi in her bear sweater",
+    image: "./images/projects/16.jpg",
+    tag: ["All", "Pipi"],
+    gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
+    previewUrl:"https://loki-pup.github.io/",
+},
 ]
 
 const projectTagsData = [
@@ -95,9 +165,11 @@ const projectTagsData = [
     {name:"Border Collie"},
     {name:"Loki"},
     {name:"Luna"},
+    {name:"Lulu"},
     {name:"Fifi"},
     {name:"Happy"},
-    {name:"Golden Retriever"}
+    {name:"Golden Retriever"},
+    {name:"Pipi"}
 ]
 
 const ProjectsSection = () => {
