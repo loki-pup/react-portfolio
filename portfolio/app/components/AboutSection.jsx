@@ -17,7 +17,8 @@ const TAB_DATA =[
             <li>Herd</li>
         </ul>
     ),
-    },    {
+    },    
+    {
         title:"Education",
         id:"education",
         content:(
@@ -26,7 +27,8 @@ const TAB_DATA =[
                 <li>Bozyu country</li>
             </ul>
         ),
-        },     {
+        },     
+        {
             title:"Certification",
             id:"certification",
             content:(
@@ -79,7 +81,7 @@ const AboutSection = () =>{
                         </TabButton>
                         </div>
                         <div>
-                            <div className="mt-8 px-1 py-1 bg-[#483C32]/30">
+                            <div className="mt-8 px-1 py-1 ">
                                 {TAB_DATA.find((t) => t.id ===tab).content}
                             </div>
                         
@@ -91,3 +93,4 @@ const AboutSection = () =>{
 };
 
 export default AboutSection;
+//bg-[#483C32]/30
