@@ -1,35 +1,42 @@
 "use client";
 import React from "react";
 import dynamic from "next/dynamic";
+import { useTranslations } from "next-intl";
+
+
+
+//sm:bg-slate-500/30
+
+const AchievementSection = () =>{
+    const t =useTranslations();
 
 const AnimatedNumbers = dynamic(() => {return import ("react-animated-numbers")}, {ssr: false});
 
 const achievementList = [
     {
-        metric:"Age",
+        metric:t("age"),
         value:"7",
         postfix:"+"
     },
     {
-        metric:"Weight",
+        metric:t("weight"),
         value:"20",
         postfix:"+" 
     },
     {
-        metric:"Toys",
+        metric:t("toy"),
         value:"100",
         postfix:"+"
     },
     {
         prefix:"~",
-        metric:"Beds",
+        metric:t("bed"),
         value:"4"
     }
 ];
 
-//sm:bg-slate-500/30
 
-const AchievementSection = () =>{
+
     return (
         <div className="pt-8 pb-4 px-4 xl:gap-16 sm:py-16 xl:px-4 ">
             <div className=" sm:border-slate-500/40 sm:border rounded-md pt-8 pb-2 sm:py-6 px-16 sm:px-10 flex flex-col gap-5 sm:flex-row items-center justify-between">

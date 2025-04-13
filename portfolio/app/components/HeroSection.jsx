@@ -41,13 +41,13 @@ const HeroSection =() =>{
     />
                     </h1>
                         <p className="text-[#FBEBD9] text-base sm:text-lg mb-6 lg:text-xl">
-                                  I love food
+                                  {t("food")}
                         </p>
                         <div>
                             <button
                             onClick={() => window.open("https://www.paypal.com/paypalme/bobozyu?locale.x=en_AU", "_blank")} 
                             className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-amber-500 via-red-500 to-purple-500  hover:bg-slate-200 text-white">
-                                Feed Me</button>
+                                {t("feedme")}</button>
                             <button 
                                 onClick={() => {
                                 const link = document.createElement("a");
@@ -59,7 +59,7 @@ const HeroSection =() =>{
                               }}
                             className="px-1 py-1 w-full sm:w-fit rounded-full  bg-gradient-to-br from-amber-500 via-red-500 to-purple-500 hover:bg-slate-800 text-white mt-3 mb-6 sm:my-0">
                                 <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                                    Download Bozyu</span>
+                                {t("download")}</span>
                                 </button>
                         </div>
             </motion.div>

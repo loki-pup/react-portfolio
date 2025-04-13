@@ -4,32 +4,42 @@ import Link from "next/link";
 import NavLink from "./NavLink";
 import  {Bars3Icon, XMarkIcon}  from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import LanguageButton from "./LanguageButton";
+import { useTranslations } from "next-intl";
 
-const navLinks = [
-    {
-        title: "About",
-        path:"#about",
-    },
-    {
-        title: "Projects",
-        path:"#projects",
-    },
-    {
-        title: "Contact",
-        path:"#contact",
-    }
-]
+
 
 const Navbar =() => {
+    const t =useTranslations();
+
+    const navLinks = [
+        {
+            title: t("about"),
+            path:"#about",
+        },
+        {
+            title: t("dog"),
+            path:"#projects",
+        },
+        {
+            title: t("contact"),
+            path:"#contact",
+        }
+    ];
+
 const [navbarOpen, setnavbarOpen] = useState(false);
 
     return(
         <nav className="fixed mx-auto top-0 left-0 right-0 z-10 bg-slate-600   bg-opacity-20">
         <div className="flex  flex-wrap lg:py-4 items-center justify-between mx-auto px-4 py-2">
-            <Link href={"/"} className="text-2xl md:text-5xl md: pl-5 text-white font-semibold">
-                BOZYU
+            <Link href={"/"} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl md: pl-5 text-white font-semibold">
+                {t("title")}
                 </Link>
-                <div className="mobile-menu block md:hidden">
+                <div className="flex flex-row">
+                    <div className=" flex mr-5 items-center lg:mr-14 mt-0 sm:mr-4 md:mr-8">
+                        <LanguageButton />
+                    </div>
+                <div className="mobile-menu block sm:hidden">
                     {
                        !navbarOpen ?  
                        (<button 
@@ -45,8 +55,8 @@ const [navbarOpen, setnavbarOpen] = useState(false);
                        </button>)
                     }
                 </div>
-            <div className="menu hidden md:block md:w-auto " id="navbar">
-                <ul className="flex p-4 md:p-0 md:mr-8 md:flex-row md: space-x-8 mt-8">
+            <div className="menu hidden sm:block sm:w-auto " id="navbar">
+                <ul className="flex md:py-4 sm:mr-1 md:mr-4 lg:mr-6 sm:flex-row lg:space-x-8 mt-0 sm:space-x-1 md:space-x-4 ">
                     {navLinks.map((link, index) =>(
                         <li key={index}>
                             <NavLink href = {link.path} title={link.title} />
@@ -54,6 +64,7 @@ const [navbarOpen, setnavbarOpen] = useState(false);
                     ))    
                     }
                 </ul>
+            </div>
             </div>
         </div>
         {navbarOpen ? <MenuOverlay links={navLinks} /> : null}

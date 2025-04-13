@@ -9,7 +9,7 @@
   /** @type {import('next').NextConfig} */
   const nextConfig = {
     basePath: "/react-portfolio",
-     assetPrefix:"/react-portfolio/",
-     output:"export",
+    assetPrefix:"/react-portfolio/",
+    output:"export",
   };
   export default withNextIntl(nextConfig);
