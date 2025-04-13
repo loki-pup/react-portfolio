@@ -17,6 +17,15 @@ export const metadata = {
 
 };
 
+// Static Params for dynamic locale route
+export function generateStaticParams() {
+  // Return a list of all possible locale values
+  return [
+    { locale: 'en' },
+    { locale: 'zh' }, // Add any other locales you support here
+  ];
+}
+
 
 export default async function LocaleLayout({ children, params }) {
   const { locale } = await params;
@@ -24,7 +33,7 @@ export default async function LocaleLayout({ children, params }) {
     notFound();
   }
 
-  console.log("Locale from URL:", locale);
+  //console.log("Locale from URL:", locale);
 
   //const messages = await getMessages();
 

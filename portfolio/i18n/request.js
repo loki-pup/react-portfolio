@@ -7,7 +7,7 @@ export default getRequestConfig(async ({requestLocale}) => {
     ? requestLocale
     : routing.defaultLocale;
 
-    console.log("Detected Locale:", locale); 
+   // console.log("Detected Locale:", locale); 
 
   return {
     locale,
