@@ -3,9 +3,12 @@ import  React from "react";
 import Image  from "next/image";
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from "framer-motion";
+import { useTranslations } from 'next-intl';
 
 
 const HeroSection =() =>{
+    const t = useTranslations();
+
     return(
         <section className="lg:mb-12 ">
         <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -17,19 +20,19 @@ const HeroSection =() =>{
             >
                     <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold ">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-purple-600">
-                            Hello, I&#39;m{" "}
+                            {t("greeting1")}{" "}
                         </span>
                         <br></br>
                         <TypeAnimation
       sequence={[
         // Same substring at the start will only be typed out once, initially
-        'Bozyu',
+        t("greeting2"),
         1000, // wait 1s before replacing "Mice" with "Hamsters"
-        'Border Collie',
+        t("greeting5"),
         1000,
-        'Happy Dog',
+        t("greeting3"),
         1000,
-        'Hungry Venom Dog',
+        t("greeting4"),
         1000
       ]}
       wrapper="span"

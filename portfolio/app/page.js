@@ -1,26 +1,6 @@
-import Image from "next/image";
-import HeroSection from "./components/HeroSection";
-import Navbar from "./components/Navbar";
-import AboutSection from "./components/AboutSection";
-import ProjectsSection from "./components/ProjectsSection";
-import EmailSection from "./components/EmailSection";
-import Footer from "./components/Footer";
-import AchievementSection from "./components/AchievementSection";
+import {redirect} from 'next/navigation';
 
-
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col bg-contain " style={{ backgroundImage: "url('./images/background2.png')" }}>
-      
-    <Navbar />
-    <div class="container mt-24 mx-auto px-12 py-4">
-      <HeroSection />
-      <AchievementSection />
-      <AboutSection />
-      <ProjectsSection />
-      <EmailSection />
-      </div>
-      <Footer />
-    </main>
-  );
+// This page only renders when the app is built statically (output: 'export')
+export default function RootPage() {
+  redirect('/en');
 }
