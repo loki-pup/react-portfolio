@@ -18,10 +18,10 @@ const EmailSection = () =>{
 
         emailjs
         .sendForm(
-            process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-            process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+            process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "bozyu",
+            process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "bozyu_template",
             form.current,
-            process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+            process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ?? "ZMXwpTocLixGX4cGs"
         )
         .then(
             () =>{
