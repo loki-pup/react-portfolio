@@ -5,17 +5,30 @@ import {NextIntlClientProvider, hasLocale, getMessages} from 'next-intl';
 import {notFound} from 'next/navigation';
 import {routing} from '../../i18n/routing';
 
+
 const inter = Inter({ subsets: ['latin'] });
 
 
-export const metadata = {
-  title: "Bozyu's Playground 🐾",
-  description: "Play with doggies! Meet Loki, Bozyu, Luna, Fifi, Pipi and Happy. Proudly made by Bozyu",
-  icons: {
-    icon: "./images/projects/bozyu.png?v=2", // Use absolute path from /public folder
-  },
+export async function generateMetadata({ params }){
+  //console.log("✅ generateMetadata called with:", params);
+  const {locale} = await params;
 
-};
+  const messages = (await import(`../../locales/${locale}.json`)).default;
+  //console.log("title: ", messages.appName);
+
+  return  {
+    title: messages.appName,
+    description: messages.appDesp,
+    keywords: ['Next.js', 'React', 'JavaScript','Bozyu'],
+    authors: [{ name: 'Bozyu' }, { name: 'Lulu'},{name:'Loki'},{name:'Luna'}],
+    creator: 'Bozyu',
+    publisher: 'Bozyu',
+    icons: {
+      icon: "./images/projects/bozyu.png?v=2", // Use absolute path from /public folder
+    },
+  
+  };
+}
 
 // Static Params for dynamic locale route
 export function generateStaticParams() {

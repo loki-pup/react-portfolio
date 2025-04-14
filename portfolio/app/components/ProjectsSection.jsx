@@ -198,6 +198,15 @@ const ProjectsSection = () => {
         gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
         previewUrl:"https://loki-pup.github.io/",
     },
+    {
+        id: 17,
+        title:t("t17"),
+        description: t("d17"),
+        image: "./images/projects/17.JPG",
+        tag: ["All", "Loki","Lulu"],
+        gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
+        previewUrl:"https://loki-pup.github.io/",
+    },
     ];
 
 
