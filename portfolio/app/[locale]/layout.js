@@ -35,7 +35,7 @@ export function generateStaticParams() {
   // Return a list of all possible locale values
   return [
     { locale: 'en' },
-    { locale: 'zh' }, // Add any other locales you support here
+    { locale: 'canto' }, // Add any other locales you support here
   ];
 }
 

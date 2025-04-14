@@ -9,14 +9,14 @@ export function middleware(request) {
     pathname.startsWith('/api') ||
     pathname.startsWith('/images') ||
     pathname.startsWith('/favicon.ico') || // Make sure favicon is excluded
-    pathname.match(/^\/(en|zh)(\/|$)/) // Skip if path already includes 'en' or 'zh'
+    pathname.match(/^\/(en|canto)(\/|$)/) // Skip if path already includes 'en' or 'zh'
   ) {
     return NextResponse.next(); // Continue the request if conditions are met
   }
 
   const acceptLang = request.headers.get('accept-language') || '';
   const normalized = acceptLang.toLowerCase();
-  const preferredLocale = normalized.startsWith('zh') ? 'zh' : 'en';
+  const preferredLocale = normalized.startsWith('zh') ? 'canto' : 'en';
 
   // Redirect to the preferred locale
   return NextResponse.redirect(new URL(`/${preferredLocale}${pathname}`, request.url));

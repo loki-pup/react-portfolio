@@ -10,7 +10,7 @@ const LanguageButton = () =>{
     //console.log(`Current router: ${router}`);
 
     const toggleLanguage = (currentLocale) =>{
-        const newLocale = currentLocale === "en" ? "zh" : "en";
+        const newLocale = currentLocale === "en" ? "canto" : "en";
 
         //console.log(`Current Locale: ${currentLocale}, New Locale: ${newLocale}`);
 
