@@ -75,5 +75,6 @@
     "email":"Your email",
     "sub":"Subject",
     "msg":"Message",
-    "send":"Send Message"
+    "send":"Send Message",
+    "dogtag":"Doggie Tags:"
 }
