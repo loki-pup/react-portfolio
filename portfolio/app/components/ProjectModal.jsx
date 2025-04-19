@@ -60,13 +60,14 @@ export default function ProjectModal({ project, onClose, onNext, onPrev }) {
                             </ul>
                         </div>
                     </div>
-                    <div className="relative h-full w-full md:w-3/5 sm:pr-3 sm:pt-2">
+                    <div className="relative inline-block h-auto max-h-[68vh] w-full md:w-3/5 sm:pr-3 sm:pt-2">
                         <img
                             src={project.image}
                             alt={project.title}
+                            className="w-auto h-auto max-w-full max-h-full object-contain"
                             style={{
-                                width: '95%',
-                                height: '95%',
+                                width: '100%',
+                                height: '100%',
                                 objectFit: 'contain'
                             }}
                         />
