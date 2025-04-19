@@ -22,30 +22,31 @@ export default function ProjectModal({ project, onClose, onNext, onPrev }) {
             ref={modalRef}>
             <div
                 ref={modalRef}
-                className="relative bg-gray-900 rounded-lg max-w-4xl w-10/12 max-h-[90vh] overflow-y-auto p-12 h-10/12"
+                className="relative bg-gray-900 rounded-lg max-w-4xl w-10/12 max-h-[90vh] overflow-y-auto px-12 py-7 sm:p-12 h-10/12"
                 onClick={(e) => e.stopPropagation()}>
                     <button
                             onClick={onPrev}
-                            className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800/50 rounded-full text-white hover:text-[#FBEBD9] p-2 hover:bg-gray-800/70 transition-colors translate-x-[30%]">
+                            className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800/50 rounded-full text-white hover:text-[#FBEBD9] 
+                            p-1 sm:p-2 hover:bg-gray-800/70 transition-colors translate-x-[30%]">
                             <ChevronLeft size={24} />
                         </button>
-                <div className="relative md:pl-8 mb-6">
-                    <h2 className="text-3xl font-bold text-white">{project.title}</h2>
+                <div className="relative sm:pl-8 mb-2 sm:mb-6">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-white">{project.title}</h2>
                     <button
                         onClick={onClose}
                         className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white translate-x-[90%]
-                        hover:text-[#FBEBD9] rounded-full p-2 bg-gray-800 
+                        hover:text-[#FBEBD9] rounded-full p-1 sm:p-2 bg-gray-800 
                         hover:bg-gray-800/70 transition-colors">
                         <X size={24} />
                     </button>
                 </div>
-                <div className="flex flex-col md:flex-row gap-6">
-                    <div className="space-y-4 md:w-1/3 md:pl-8">
+                <div className="flex flex-col md:flex-row gap-6 ">
+                    <div className="space-y-1 sm:space-y-4 md:w-2/5 md:pl-8">
                         <p className="text-gray-300 text-lg">
                             {project.description}
                         </p>
                         <div>
-                            <h3 className="font-semibold mb-2 text-lg text-white">
+                            <h3 className="font-semibold mb-1 sm:mb-2 text-lg text-white">
                                 {t("dogtag")}
                                 </h3>
                             <ul className="list-disc list-inside">
@@ -59,7 +60,7 @@ export default function ProjectModal({ project, onClose, onNext, onPrev }) {
                             </ul>
                         </div>
                     </div>
-                    <div className="relative h-full w-full md:w-2/3 md:pr-8">
+                    <div className="relative h-full w-full md:w-3/5 sm:pr-3 sm:pt-2">
                         <img
                             src={project.image}
                             alt={project.title}
@@ -70,12 +71,13 @@ export default function ProjectModal({ project, onClose, onNext, onPrev }) {
                             }}
                         />
                     </div>
-                    <button
+                </div>
+                <button
                             onClick={onNext}
-                            className="absolute  top-1/2 -translate-y-1/2 bg-gray-800/50 rounded-full text-white hover:text-[#FBEBD9] p-2 hover:bg-gray-800/70 transition-colors right-0 -translate-x-[30%]">
+                            className="absolute  top-1/2 -translate-y-1/2 bg-gray-800/50 rounded-full text-white hover:text-[#FBEBD9] 
+                            p-1 sm:p-2 hover:bg-gray-800/70 transition-colors right-0 -translate-x-[30%]">
                             <ChevronRight size={24} />
                         </button>
-                </div>
             </div>
         </div>
     );
