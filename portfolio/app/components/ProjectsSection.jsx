@@ -41,7 +41,10 @@ const ProjectsSection = () => {
             name:"Golden Retriever"},
         {
             tag_name:"Pipi",
-            name:"Pipi"}
+            name:"Pipi"},
+        {
+            tag_name:t("video"),
+            name:"video"}  
     ];
 
 
@@ -213,9 +216,9 @@ const ProjectsSection = () => {
         title:t("t18"),
         description: t("d18"),
         image: "./images/projects/18.JPG",
-        tag: [t("all"), t("border"),t("bozyu"),"Lulu"],
+        tag: [t("all"), t("border"),t("bozyu"),"Lulu",t("video")],
         gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
-        previewUrl:"https://loki-pup.github.io/",
+        previewUrl:"./images/projects/18.MOV",
     },
     ];
 

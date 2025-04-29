@@ -61,16 +61,30 @@ export default function ProjectModal({ project, onClose, onNext, onPrev }) {
                         </div>
                     </div>
                     <div className="relative inline-block h-auto max-h-[68vh] w-full md:w-3/5 sm:pr-3 sm:pt-2">
-                        <img
-                            src={project.image}
-                            alt={project.title}
-                            className="w-auto h-auto max-w-full max-h-full object-contain"
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'contain'
-                            }}
-                        />
+                    {project.tag.includes(t("video")) ? (
+    <video
+        src={project.previewUrl}
+        poster={project.image}
+        controls
+        className="w-auto h-auto max-w-full max-h-full object-contain"
+        style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'contain'
+        }}
+    />
+) : (
+    <img
+        src={project.image}
+        alt={project.title}
+        className="w-auto h-auto max-w-full max-h-full object-contain"
+        style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'contain'
+        }}
+    />
+)}
                     </div>
                 </div>
                 <button
