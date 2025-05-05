@@ -217,7 +217,7 @@ const ProjectsSection = () => {
         description: t("d18"),
         image: "./images/projects/18.JPG",
         tag: [t("all"), t("border"),t("bozyu"),"Lulu",t("video")],
-        gitUrl:"https://loki-pup.github.io/htmltest/html/test.html",
+        gitUrl:"https://youtube.com/@bobozyu?si=WG-KuitBVxRs8JZY",
         previewUrl:"./images/projects/18.MOV",
     },
     ];
@@ -325,6 +325,12 @@ const ProjectsSection = () => {
         onPrev={handlePrevProject}
         />
     )}
+            <div className="place-self-center w-full aspect-[112/63] mt-8 md:mt-12 max-w-[1100px]">
+            <iframe src="https://www.youtube.com/embed/EudgsYfau5Q?si=GR-o7iwehvaejvMz" 
+            className="w-full h-full"
+            title="Luna Boop Boop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
         </section>
     )
 };
