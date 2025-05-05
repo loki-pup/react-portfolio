@@ -33,7 +33,7 @@ export async function generateMetadata({ params }){
       url: 'https://loki-pup.github.io/react-portfolio/en',
       images: [
         {
-          url: "./images/projects/7.jpg",
+          url: "https://loki-pup.github.io/react-portfolio/images/projects/7.jpg",
           width: 1200,
           height: 630,
           alt: "Bozyu",
