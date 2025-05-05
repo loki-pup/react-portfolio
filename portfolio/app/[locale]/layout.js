@@ -26,7 +26,18 @@ export async function generateMetadata({ params }){
     icons: {
       icon: "./images/projects/bozyu.png?v=2", // Use absolute path from /public folder
     },
-    images:[{url:"./images/projects/8.hpg"}],
+    openGraph: {
+      title: messages.appName,
+      description: messages.appDesp,
+      type: 'website',
+      url: 'https://loki-pup.github.io/react-portfolio/en',
+      images: [
+        {
+          url: "./images/projects/8.jpg",
+          alt: "Bozyu",
+        },
+      ],
+    },
   
   };
 }
