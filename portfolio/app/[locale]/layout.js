@@ -26,6 +26,7 @@ export async function generateMetadata({ params }){
     icons: {
       icon: "./images/projects/bozyu.png?v=2", // Use absolute path from /public folder
     },
+    images:[{url:"./images/projects/8.hpg"}],
   
   };
 }
