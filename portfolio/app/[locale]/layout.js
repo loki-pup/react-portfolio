@@ -34,6 +34,8 @@ export async function generateMetadata({ params }){
       images: [
         {
           url: "./images/projects/7.jpg",
+          width: 1200,
+          height: 630,
           alt: "Bozyu",
         },
       ],
