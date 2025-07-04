@@ -23,6 +23,8 @@ export default function Home() {
       <ProjectsSection />
       <EmailSection />
       </div>
+      <doggie-widget project="8"></doggie-widget>
+<script src="https://saas-widget-inky.vercel.app/widget.umd.js"></script>
       <Footer />
     </main>
   );
